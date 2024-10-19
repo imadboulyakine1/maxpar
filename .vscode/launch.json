@@ -1,0 +1,33 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "build",
+        "type": "shell",
+        "command": "g++",
+        "args": [
+          "-g", // Enable debugging
+          "-Wall", // Enable warnings
+          "src/main.cpp", // Your C++ source file
+          "-o", 
+          "build/my-cpp-project" // Output executable
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": [
+          "$gcc"
+        ]
+      },
+      {
+        "label": "run",
+        "type": "shell",
+        "command": "build/my-cpp-project", 
+        "group": {
+          "kind": "test",
+          "isDefault": true
+        }
+      }
+    ]
+  }
